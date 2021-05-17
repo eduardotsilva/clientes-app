@@ -4,43 +4,67 @@
 </ol>
 
 <div class="container">
-  <form>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-            <label for="id">ID:</label>
-            <input id="id" type="text" class="form-control" disabled=true>
+    <form>
+      <div class="row">
+      
+        <div class="col-md-6">
+          <div class="form-group">
+              <label for="id">ID:</label>
+              <input id="id" 
+              type="text" 
+              class="form-control" 
+              disabled=true
+              [ngModel]="cliente.id"
+              name="id"
+              >
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="dataCadastro">Data Cadastro:</label>
+                <input id="dataCadastro" 
+                type="text" 
+                class="form-control" 
+                disabled=true
+                [ngModel]="cliente.dataCadastro"
+                name="dataCadastro"
+                >
+            </div>
+          </div>
+  
+        <div class="col-md-6">
+          <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input id="nome" 
+              type="text" 
+              class="form-control" 
+              [(ngModel)]="cliente.nome"
+              name="nome">
+  
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="form-group">
+              <label for="cpf">CPF:</label>
+              <input id="cpf" 
+              type="text" 
+              class="form-control"
+              [(ngModel)]="cliente.cpf"
+              name="cpf"
+              >
+          </div>
         </div>
       </div>
-
-      <div class="col-md-6">
-        <div class="form-group">
-            <label for="dataCadastro">Data Cadastro:</label>
-            <input id="dataCadastro" type="text" class="form-control" disabled=true>
-        </div>
+      <div class="row">
+          <div class="col-md-2">
+              <button type="submit" class="btn btn-success" >
+                  <i class="fa fa-save"></i>
+                  SALVAR
+              </button>
+          </div>
       </div>
-
-      <div class="col-md-6">
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input id="nome" type="text" class="form-control">
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="form-group">
-            <label for="cpf">CPF:</label>
-            <input id="cpf" type="text" class="form-control">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            <button type="submit" class="btn btn-success">
-                <i class="fa fa-save"></i>
-                SALVAR
-            </button>
-        </div>
-    </div>
-  </form>
-</div>
+    </form>
+  </div>
+  
