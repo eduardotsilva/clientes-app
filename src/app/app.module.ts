@@ -20,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     ClientesModule,
-    TemplateModule
+    TemplateModule,
+    ClientesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
