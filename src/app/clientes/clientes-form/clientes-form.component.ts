@@ -23,8 +23,8 @@ export class ClientesFormComponent implements OnInit {
       (response) => {
         this.errors = [];
         this.success = true;
-        this.cliente.cpf = "";
-        this.cliente.nome = "";
+        this.cliente.id = response.id;
+        this.cliente.dataCadastro = response.dataCadastro;
       },
       (responseError) => {
         this.success = false;

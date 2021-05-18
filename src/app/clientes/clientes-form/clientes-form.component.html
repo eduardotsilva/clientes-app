@@ -18,9 +18,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="cliente.id">
         <div class="form-group">
-          <label for="id">ID:</label>
+          <label for="id">Código</label>
           <input
             id="id"
             type="text"
@@ -32,9 +32,9 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="cliente.id">
         <div class="form-group">
-          <label for="dataCadastro">Data Cadastro:</label>
+          <label for="dataCadastro">Data Cadastro</label>
           <input
             id="dataCadastro"
             type="text"
@@ -48,7 +48,7 @@
 
       <div class="col-md-6">
         <div class="form-group">
-          <label for="nome">Nome:</label>
+          <label for="nome">Nome</label>
           <input
             id="nome"
             type="text"
@@ -61,7 +61,7 @@
 
       <div class="col-md-6">
         <div class="form-group">
-          <label for="cpf">CPF:</label>
+          <label for="cpf">CPF</label>
           <input
             id="cpf"
             type="text"
