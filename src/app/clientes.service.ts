@@ -11,8 +11,6 @@ export class ClientesService {
 
   getCliente(): Cliente {
     let cliente: Cliente = new Cliente();
-    cliente.nome = "Eduardo Tadeu";
-    cliente.cpf = "1231231";
 
     return cliente;
   }
