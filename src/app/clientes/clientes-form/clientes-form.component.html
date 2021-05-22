@@ -73,10 +73,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3">
-        <button type="submit" class="btn btn-success">
+      <div class="col-md-4">
+       
+        <button type="submit" class="btn btn-success" *ngIf="!cliente.id">
           <i class="fa fa-save"></i>
           SALVAR
+        </button>
+
+        <button type="submit" class="btn btn-primary" *ngIf="cliente.id">
+          <i class="fa fa-sync-alt"></i>
+          ATUALIZAR
         </button>
 
         <button type="button" class="btn btn-danger ml-1" (click)="voltarParaListagem()">
