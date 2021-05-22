@@ -10,6 +10,7 @@ import { TemplateModule } from "./template/template.module";
 import { HomeComponent } from "./home/home.component";
 import { ClientesService } from "./clientes.service";
 import { HttpClientModule } from "@angular/common/http";
+import { ServicoPrestadoModule } from "./servico-prestado/servico-prestado.module";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -21,6 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
     ClientesModule,
     TemplateModule,
     ClientesModule,
+    ServicoPrestadoModule
   ],
   providers: [ClientesService],
   bootstrap: [AppComponent],
