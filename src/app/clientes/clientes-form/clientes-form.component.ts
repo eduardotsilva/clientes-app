@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Cliente } from "../cliente";
 import { ClientesService } from "../../clientes.service";
 import { Router, ActivatedRoute } from "@angular/router";
+import { ɵangular_packages_platform_browser_platform_browser_g } from "@angular/platform-browser";
 
 @Component({
   selector: "app-clientes-form",
@@ -71,4 +72,6 @@ export class ClientesFormComponent implements OnInit {
   voltarParaListagem() {
     this.router.navigate(["/clientes-lista"]);
   }
+
+ 
 }
