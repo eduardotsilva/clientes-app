@@ -11,6 +11,7 @@ import { HomeComponent } from "./home/home.component";
 import { ClientesService } from "./clientes.service";
 import { HttpClientModule } from "@angular/common/http";
 import { ServicoPrestadoModule } from "./servico-prestado/servico-prestado.module";
+import { ServicoPrestadoService } from "./servico-prestado.service";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -21,10 +22,9 @@ import { ServicoPrestadoModule } from "./servico-prestado/servico-prestado.modul
     AppRoutingModule,
     ClientesModule,
     TemplateModule,
-    ClientesModule,
     ServicoPrestadoModule
   ],
-  providers: [ClientesService],
+  providers: [ClientesService,ServicoPrestadoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
