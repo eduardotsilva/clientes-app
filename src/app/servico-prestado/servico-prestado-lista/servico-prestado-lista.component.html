@@ -30,9 +30,9 @@
           </option>
         </select>
       </div>
-    </div>  
+    </div>
 
-    <br>
+    <br />
 
     <div class="row">
       <div class="col-md-3">
@@ -43,4 +43,33 @@
       </div>
     </div>
   </form>
+
+  <br />
+  <div class="row">
+    <div class="alert alert-warning" role="alert" *ngIf="message">
+      {{message}}
+    </div>
+
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of lista">
+            <td>{{ s.cliente.nome }}</td>
+            <td>{{ s.descricao }}</td>
+            <td>{{ s.valor }}</td>
+            <td>{{ s.data }}</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
