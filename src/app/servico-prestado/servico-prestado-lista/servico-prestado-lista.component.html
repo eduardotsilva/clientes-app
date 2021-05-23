@@ -40,6 +40,15 @@
           <i class="fa fa-search"></i>
           Consultar
         </button>
+
+        <button
+          type="button"
+          class="btn btn-warning ml-2"
+          routerLink="/servico-prestado-form"
+        >
+          <i class="fa fa-plus"></i>
+          Novo
+        </button>
       </div>
     </div>
   </form>
@@ -47,7 +56,7 @@
   <br />
   <div class="row">
     <div class="alert alert-warning" role="alert" *ngIf="message">
-      {{message}}
+      {{ message }}
     </div>
 
     <div class="col-md-12">
