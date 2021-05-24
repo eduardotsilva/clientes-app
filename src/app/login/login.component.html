@@ -1,0 +1,46 @@
+<div id="layoutAuthentication">
+  <div id="layoutAuthentication_content">
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+              <div class="card-header">
+                <h3 class="text-center font-weight-light my-4">Acesso ao sistema</h3>
+              </div>
+
+              <div class="card-body">
+                <div class="alert alert-danger">Login ou senha inválido</div>
+
+                <form #loginForm="ngForm" (submit)="onSubmit()">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="username"
+                      [(ngModel)]="username"
+                      class="form-control py-4"
+                      placeholder="Login"
+                    />
+
+                    <input
+                    type="passwaord"
+                    name="passwaord"
+                    [(ngModel)]="passwaord"
+                    class="form-control py-4 mt-2"
+                    placeholder="Senha"
+                  />
+
+                    <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                      <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
