@@ -40,6 +40,9 @@ export class LoginComponent {
       (response) => {
         this.mensagemSucesso = "Cadastro realizado com sucesso!"
         this.errors = null;
+        this.cadastroUsuario = false;
+        this.username = "";
+        this.password = "";
       },
       (responseError) => {
         this.mensagemSucesso = null;
