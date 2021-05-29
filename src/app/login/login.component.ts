@@ -11,9 +11,9 @@ import { Usuario } from "./usuario";
 export class LoginComponent {
   username: string;
   password: string;
-  loginError: boolean;
   cadastroUsuario: boolean;
   mensagemSucesso: string;
+  errors: string[];
 
   constructor(private router: Router, private authService: AuthService) {}
 
@@ -39,11 +39,12 @@ export class LoginComponent {
     this.authService.salvar(usuario).subscribe(
       (response) => {
         this.mensagemSucesso = "Cadastro realizado com sucesso!"
-        this.loginError = false;
+        this.errors = null;
       },
       (responseError) => {
         this.mensagemSucesso = null;
-        this.loginError = true;
+        this.errors = responseError.error.errors;
+        
       }
     );
   }

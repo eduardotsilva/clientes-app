@@ -20,8 +20,8 @@
                   {{mensagemSucesso}}
                 </div>
 
-                <div class="alert alert-danger" *ngIf="loginError">
-                  Login ou senha inválido
+                <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+                  {{ erro }}
                 </div>
 
                 <form #loginForm="ngForm" (submit)="onSubmit()">
