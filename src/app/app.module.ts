@@ -13,6 +13,7 @@ import { ClientesService } from "./clientes.service";
 import { ServicoPrestadoModule } from "./servico-prestado/servico-prestado.module";
 import { ServicoPrestadoService } from "./servico-prestado.service";
 import { LoginComponent } from "./login/login.component";
+import { AuthService } from "./auth.service";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent,LoginComponent],
@@ -26,7 +27,7 @@ import { LoginComponent } from "./login/login.component";
     TemplateModule,
     ServicoPrestadoModule,
   ],
-  providers: [ClientesService, ServicoPrestadoService],
+  providers: [ClientesService, ServicoPrestadoService, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
