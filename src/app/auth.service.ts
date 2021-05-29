@@ -31,10 +31,6 @@ export class AuthService {
       
     };
 
-    console.log(headers);
-    console.log(params);
-    console.log(`username ${username} pass ${password}`);
-
     return this.http.post(this.tokenURL, params.toString(), {
       headers: headers,
     });
