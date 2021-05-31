@@ -22,12 +22,19 @@
           </div>
           Serviços Prestados</a>
 
+          <div class="sb-sidenav-menu-heading">Sair</div>
+          <a class="nav-link" 
+          (click)="logout();" href="#"
+          ><div class="sb-nav-link-icon">
+            <i class="fas fa-sign-out-alt"></i>
+          </div>
+          Sair do sistema</a>
 
       </div>
     </div>
     <div class="sb-sidenav-footer">
-      <div class="small">Logged in as:</div>
-      Start Bootstrap
+      <div class="small">Usuário</div>
+      {{ usuarioLogado }}
     </div>
   </nav>
 </div>

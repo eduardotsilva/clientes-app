@@ -23,11 +23,12 @@ export class LoginComponent {
         
         const access_token = JSON.stringify(response);
         localStorage.setItem("access_token",access_token);
-
+        this.errors =[] ;
         this.router.navigate(["/home"]);
       },
       (responseError) => {
         console.log(responseError);
+        this.mensagemSucesso = null;
         this.errors = ["Usuário e/ou senha incorreto(s)."];
       }
     );
@@ -35,11 +36,15 @@ export class LoginComponent {
 
   cadastrarUsuario(event) {
     event.preventDefault();
+    this.errors = null;
+    this.mensagemSucesso = null;
     this.cadastroUsuario = true;
   }
 
   cancelaCadastro() {
     this.cadastroUsuario = false;
+    this.errors = null;
+    this.mensagemSucesso = null;
   }
 
   cadastrar() {
