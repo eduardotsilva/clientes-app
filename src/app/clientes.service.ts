@@ -15,7 +15,7 @@ export class ClientesService {
   token = JSON.parse(this.tokenString);
 
   headers = {
-    Authorization: "Bearer " + this.token.access_token,
+    "Authorization": "Bearer " + this.token.access_token,
   };
 
   constructor(private http: HttpClient) {}
