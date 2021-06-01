@@ -3,11 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
+  },
+  "engines": {
+    "node": "14.16.1",
+    "npm": "6.14.12"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +26,7 @@
     "@auth0/angular-jwt": "^5.0.2",
     "bootstrap": "^4.6.0",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "jquery": "^3.6.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
