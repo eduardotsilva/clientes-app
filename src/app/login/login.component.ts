@@ -27,7 +27,7 @@ export class LoginComponent {
         this.router.navigate(["/home"]);
       },
       (responseError) => {
-        console.log(responseError);
+        
         this.mensagemSucesso = null;
         this.errors = ["Usuário e/ou senha incorreto(s)."];
       }
