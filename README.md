@@ -8,7 +8,7 @@ jwtHelper </br>
 [clientes-app](https://clientes-app-edu.herokuapp.com/) 
 
 ## Execução
-1. Projeto pode ser clonado local de sua escolha
+1. Clone o projeto
 2. Acessar a pasta que foi clonado via cmd, executar npm run build
 3. Finalizado build, execute via cmd, node server 
 
