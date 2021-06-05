@@ -10,10 +10,20 @@ import { ServicoPrestadoBusca } from "./servico-prestado/servico-prestado-lista/
 })
 export class ServicoPrestadoService {
   apiURL: string = environment.apiURLBase + "/api/servicos-prestados";
+  tokenString = localStorage.getItem("access_token");
+  token = JSON.parse(this.tokenString);
+
+  headers = {
+    "Authorization": "Bearer " + this.token.access_token,
+  };
+
+
   constructor(private http: HttpClient) {}
 
   salvar(servicoPrestado: ServicoPrestado): Observable<ServicoPrestado> {
-    return this.http.post<ServicoPrestado>(this.apiURL, servicoPrestado);
+    return this.http.post<ServicoPrestado>(this.apiURL, servicoPrestado, {
+      headers: this.headers,
+    });
   }
 
   buscar(nome: string, mes: number): Observable<ServicoPrestadoBusca[]> {
@@ -25,6 +35,8 @@ export class ServicoPrestadoService {
 
     console.log("URL: ", url);
 
-    return this.http.get<any>(url);
+    return this.http.get<any>(url, {
+      headers: this.headers,
+    });
   }
 }
