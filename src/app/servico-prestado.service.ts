@@ -14,9 +14,8 @@ export class ServicoPrestadoService {
   token = JSON.parse(this.tokenString);
 
   headers = {
-    "Authorization": "Bearer " + this.token.access_token,
+    Authorization: "Bearer " + this.token.access_token,
   };
-
 
   constructor(private http: HttpClient) {}
 
@@ -26,14 +25,14 @@ export class ServicoPrestadoService {
     });
   }
 
-  buscar(nome: string, mes: number): Observable<ServicoPrestadoBusca[]> {
+  buscar(nome: string = "", mes: number =  0): Observable<ServicoPrestadoBusca[]> {
+    
+  
     const httpParams = new HttpParams()
       .set("nome", nome)
       .set("mes", mes ? mes.toString() : "");
 
     const url = this.apiURL + "?" + httpParams.toString();
-
-    console.log("URL: ", url);
 
     return this.http.get<any>(url, {
       headers: this.headers,
