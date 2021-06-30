@@ -3,5 +3,5 @@ export const environment = {
   apiURLBase: "https://clientes-api-edu.herokuapp.com",
   clientId: "clientes-app",
   clientSecret: "@321",
-  obterTokenUrl: "/oauth/token",
+  obterTokenUrl: "/api/oauth/token",
 };
